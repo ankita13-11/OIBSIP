@@ -1,0 +1,27 @@
+#BMI calculator by Ankita Paul
+#Taking input from user
+
+name = input("enter your name: ")
+weight = float(input("enter your weight in kilogram: "))
+height = float(input("enter your height in centimeters: "))
+#BMI = weight in kilogram  / (height in meter * height in meter)
+H=height/100
+print(f'height in meter is: {H}')
+BMI = weight / (H*H)
+print(BMI)
+
+if BMI>0:
+    if(BMI<18.5):
+        print(name +",your BMI is underweight.")
+    elif(BMI<=24.9):    
+        print(name +",your BMI is normal.")
+    elif(BMI<29.9):    
+        print(name +",your BMI is overweight.")
+    elif(BMI<34.9):    
+        print(name +",your BMI is obese.")
+    elif(BMI<39.9):    
+        print(name +",your BMI is severly obese.")
+    else:    
+        print(name +",your BMI is morbidly obese.")
+else:
+    print("enter valid input")
